@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import GreetingsCard from './GreetingsCard.jsx';
+import GreetingsCard from './GreetingsCard.jsx';;
 
 const GreetingsCardWrapper = () => {
   const [greeting, setGreeting] = useState('');
+  const [designedBy, setDesignedBy] = useState('');
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -10,12 +11,13 @@ const GreetingsCardWrapper = () => {
 
     if (encodedGreeting) {
       const decodedGreeting = atob(encodedGreeting);
-      setGreeting(decodedGreeting);
+      const [greetingPart, designedByPart] = decodedGreeting.split('---');
+      setGreeting(greetingPart.trim());
+      setDesignedBy(designedByPart ? designedByPart.trim() : '');
     }
   }, []);
 
-  return <GreetingsCard greeting={greeting} />;
+  return <GreetingsCard greeting={greeting} designed_by={designedBy} />;
 };
 
 export default GreetingsCardWrapper;
-

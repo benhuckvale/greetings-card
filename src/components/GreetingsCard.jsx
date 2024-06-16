@@ -62,7 +62,7 @@ class GreetingsCard extends React.Component {
   }
 
   render() {
-    const { greeting } = this.props;
+    const { greeting, designed_by } = this.props;
 
     return (
       <div>
@@ -101,7 +101,13 @@ class GreetingsCard extends React.Component {
             </div>
           </Page>
 
-          <PageCover>THE END</PageCover>
+          <PageCover>
+              {designed_by.split('\n').map((line, index) => (
+                <p key={index}>
+                  {line.trim() === '' ? <>&nbsp;</> : line}
+                </p>
+              ))}
+          </PageCover>
         </HTMLFlipBook>
       </div>
     );
