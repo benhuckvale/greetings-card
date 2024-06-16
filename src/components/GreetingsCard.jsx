@@ -84,7 +84,7 @@ class GreetingsCard extends React.Component {
           ref={(el) => (this.flipBook = el)}
         >
           <PageCover>
-            <img src="/hokusai.png" alt="Cover" className="cover-image" />
+            <img src="/fathers_day.png" alt="Cover" className="cover-image" />
           </PageCover>
 
           <Page>
