@@ -6,6 +6,7 @@ export default defineConfig({
   integrations: [react()],
   site: 'https://benhuckvale.github.io/greetings-card',
   output: 'static',
+  outDir: 'docs',
   devToolbar: {
     enabled: false
   }
