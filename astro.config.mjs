@@ -9,5 +9,8 @@ export default defineConfig({
   outDir: 'docs',
   devToolbar: {
     enabled: false
+  },
+  build: {
+    assets: 'astro'
   }
 });
