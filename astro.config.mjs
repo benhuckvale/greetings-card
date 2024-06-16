@@ -11,6 +11,6 @@ export default defineConfig({
     enabled: false
   },
   build: {
-    assets: 'astro'
+    assets: './'
   }
 });
