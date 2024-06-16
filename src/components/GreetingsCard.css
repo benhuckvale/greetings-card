@@ -1,0 +1,26 @@
+.flip-page-container {
+  width: 400px; /* Adjust to fit your design */
+  height: 300px; /* Adjust to fit your design */
+  perspective: 1000px; /* Depth of the 3D effect */
+}
+
+.page-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* Page background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+h2, p {
+  text-align: center;
+}
+
