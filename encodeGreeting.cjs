@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const filePath = process.argv[2];
-const baseUrl = 'http://localhost:3000'; // Change to your app's base URL
+const baseUrl = 'http://localhost:4321';
 
 if (!filePath) {
   console.error('Please provide the path to the greeting file.');
