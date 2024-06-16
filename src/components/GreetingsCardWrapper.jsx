@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import GreetingsCard from './GreetingsCard.jsx';;
+import DOMPurify from 'dompurify';
 
 const GreetingsCardWrapper = () => {
   const [greeting, setGreeting] = useState('');
@@ -10,7 +11,7 @@ const GreetingsCardWrapper = () => {
     const encodedGreeting = params.get('greeting');
 
     if (encodedGreeting) {
-      const decodedGreeting = atob(encodedGreeting);
+      const decodedGreeting = DOMPurify.sanitize(atob(encodedGreeting));
       const [greetingPart, designedByPart] = decodedGreeting.split('---');
       setGreeting(greetingPart.trim());
       setDesignedBy(designedByPart ? designedByPart.trim() : '');
