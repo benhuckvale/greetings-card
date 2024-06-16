@@ -3,5 +3,11 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-    integrations: [react()],
+  integrations: [react()],
+  site: 'https://benhuckvale.github.io/greetings-card',
+  output: 'static',
+  outDir: '.',
+  devToolbar: {
+    enabled: false
+  }
 });
