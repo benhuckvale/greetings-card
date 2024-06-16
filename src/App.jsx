@@ -1,11 +1,11 @@
 import React from 'react';
-import GreetingsCard from './components/GreetingsCard.jsx';
+import GreetingsCardWrapper from './components/GreetingsCardWrapper.jsx';
 import './App.css';
 
 const App = () => {
   return (
     <div className="app">
-      <GreetingsCard />
+      <GreetingsCardWrapper />
     </div>
   );
 };
