@@ -17,7 +17,7 @@ const Page = React.forwardRef((props, ref) => {
     <div className="page" ref={ref}>
       <div className="page-content">
         <div className="page-image"></div>
-        <div className="page-text">{props.children}</div>
+        <div className="page-text"><h2>{props.children}</h2></div>
       </div>
     </div>
   );
@@ -94,7 +94,9 @@ class GreetingsCard extends React.Component {
           <Page>
             <div className="greeting">
               {greeting.split('\n').map((line, index) => (
-                <p key={index}>{line}</p>
+                <p key={index}>
+                  {line.trim() === '' ? <>&nbsp;</> : line}
+                </p>
               ))}
             </div>
           </Page>
